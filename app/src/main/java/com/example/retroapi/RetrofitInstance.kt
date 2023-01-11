@@ -7,7 +7,7 @@ object RetrofitInstance {
 
     private val retrofit by lazy {
         Retrofit.Builder()
-            .baseUrl("https://meme-api.com/gimme/")
+            .baseUrl("https://meme-api.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

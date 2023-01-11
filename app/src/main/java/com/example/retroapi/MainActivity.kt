@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         binding.btnNext.setOnClickListener {
             getData()
         }
-
     }
 
     private fun getData() {
@@ -43,11 +42,8 @@ class MainActivity : AppCompatActivity() {
                     response: Response<responseDataClass?>,
                 ) {
                     binding.title.text=response.body()?.title
-                    Log.d("tag","name" )
                     binding.author.text=response.body()?.author
-                    Log.d("tag","author" )
                     Glide.with(this@MainActivity).load(response.body()?.url).into(binding.image)
-                    Log.d("tag","image" )
                     progressDialog.dismiss()
                 }
 
